@@ -11,25 +11,25 @@ function SearchPage() {
   const { query, index } = useParams();
   const { searchImage } = useContext(dataContext);
   let queryValue = query.split("+").join(" ");
-  // const fetchSearchResult = () => {
-  //   let payload = { q: queryValue, start: index };
-  //   if (searchImage) payload = { ...payload, searchType: "image" };
-  //   fetchData(payload).then((response) => setResult(response));
-  // };
-  // useEffect(() => {
-  //   fetchSearchResult();
-  // }, [query, index, searchImage]);
+  const fetchSearchResult = () => {
+    let payload = { q: queryValue, start: index };
+    if (searchImage) payload = { ...payload, searchType: "image" };
+    fetchData(payload).then((response) => setResult(response));
+  };
+  useEffect(() => {
+    fetchSearchResult();
+  }, [query, index, searchImage]);
 
-  // if (!result) return;
-  // console.log(result);
-  // let { items, searchInformation, queries } = result;
+  if (!result) return;
+  console.log(result);
+  let { items, searchInformation, queries } = result;
 
   return (
     <>
       <div className="flex flex-col min-h-screen">
         <SearchHeader />
         <main className="grow">
-          {/* <div className="text-sm text-[#75747a] ml-48 mt-5">
+          <div className="text-sm text-[#75747a] ml-48 mt-5">
             <p className="ml-4 my-2">
               About {searchInformation.formattedTotalResults} result in
               {searchInformation.formattedSearchTime} for {queryValue}
@@ -45,7 +45,7 @@ function SearchPage() {
               : items.map((item, index) => (
                   <SearchItemTemplates data={item} key={index} />
                 ))}
-          </div> */}
+          </div>
         </main>
         <HomeFooter></HomeFooter>
       </div>

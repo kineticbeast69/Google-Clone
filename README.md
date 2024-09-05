@@ -17,3 +17,11 @@ A Google search engine clone built with React.js, Vite, Axios, React Router, Con
 - **Axios**: HTTP client for making API requests.
 - **React Router**: Routing library for navigation.
 - **Context API**: State management for global state handling.
+
+## Google Home Page
+
+![alt text](<images/google home page.png>)
+
+## Google Search Page
+
+![alt text](<images/google search page.png>)
