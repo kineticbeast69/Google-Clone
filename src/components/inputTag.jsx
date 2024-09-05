@@ -1,5 +1,5 @@
 import { MdOutlineSearch } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState, useContext } from "react";
 function InputTag() {
   const navigate = useNavigate();
@@ -27,9 +27,11 @@ function InputTag() {
         onChange={(e) => setInputValue(e.target.value)}
       />
       <div>
-        <button>
-          <img src="../../images/mic_icon.png" alt="" />
-        </button>
+        <Link to="/voiceSearch">
+          <button>
+            <img src="../../images/mic_icon.png" alt="" />
+          </button>
+        </Link>
       </div>
       <div>
         <button>

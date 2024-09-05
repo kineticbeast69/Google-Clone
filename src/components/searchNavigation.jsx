@@ -4,14 +4,17 @@ function SearchNavigation() {
   const { searchImage, setSearchImage } = useContext(dataContext);
   const [selectMenu, setSelectMenu] = useState("All");
   const menus = ["All", "Images", "Videos", "Shopping", "News", "Map"];
-  useEffect(() => {
-    return () => setSearchImage(false);
-  }, []);
   const setMenu = (menu) => {
     setSelectMenu(menu);
-    let imageMenu = menu === "Image";
-    imageMenu ? setSearchImage(true) : setSearchImage(false);
+    if (menu === "Images") {
+      setSearchImage(true);
+    } else if (menu === "All") {
+      setSearchImage(false);
+    } else {
+      setSearchImage(false);
+    }
   };
+  console.log(searchImage);
   return (
     <>
       <div className="flex justify-start align-middle ml-44">

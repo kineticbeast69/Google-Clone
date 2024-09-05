@@ -44,9 +44,11 @@ function SearchInput() {
       )}
 
       <div>
-        <button>
-          <img src="../../images/mic_icon.png" alt="" />
-        </button>
+        <Link to="/voiceSearch">
+          <button>
+            <img src="../../images/mic_icon.png" alt="" />
+          </button>
+        </Link>
       </div>
       <div>
         <button>

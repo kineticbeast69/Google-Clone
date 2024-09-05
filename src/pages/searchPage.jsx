@@ -1,31 +1,49 @@
+import { dataContext } from "../context/contextProvider";
+import { useState, useContext, useEffect } from "react";
+import SearchImageTemplates from "../components/searchImageTemplates";
+import SearchItemTemplates from "../components/searchItemTemplates";
+import { fetchData } from "../context/api";
+import SearchHeader from "../components/SearchHeader";
 import { useParams } from "react-router-dom";
 import HomeFooter from "../components/homeFooter";
-import SearchHeader from "../components/SearchHeader";
-import SearchResult from "../components/searchresult";
-import { useState, useContext, useEffect } from "react";
-import { dataContext } from "../context/contextProvider";
-import Loading from "../components/loadingSpinner";
-import { fetchData } from "../context/api";
 function SearchPage() {
-  const [result, setResult] = useState([]);
+  const [result, setResult] = useState();
   const { query, index } = useParams();
   const { searchImage } = useContext(dataContext);
-  const fetchSearchResult = () => {
-    const payload = { q: query, start: index };
-    if (searchImage) payload.searchType = "images";
-    fetchData(payload).then((result) => setResult(result));
-  };
-  useEffect(() => {
-    fetchSearchResult();
-  }, [query, index, searchImage]);
+  let queryValue = query.split("+").join(" ");
+  // const fetchSearchResult = () => {
+  //   const payload = { q: queryValue, start: index };
+  //   if (searchImage) payload.searchType = "images";
+  //   fetchData(payload).then((response) => setResult(response));
+  // };
+  // useEffect(() => {
+  //   fetchSearchResult();
+  // }, [query, index, searchImage]);
 
-  console.log(result);
+  // if (!result) return;
+  // console.log(result);
+  // let { items, searchInformation, queries } = result;
+
   return (
     <>
       <div className="flex flex-col min-h-screen">
         <SearchHeader />
         <main className="grow">
-          {result == [] ? <Loading /> : <SearchResult result={result} />}
+          {/* <div className="text-sm text-[#75747a] ml-48 mt-5">
+            <p className="ml-4 my-2">
+              About {searchInformation.formattedTotalResults} result in
+              {searchInformation.formattedSearchTime} for {queryValue}
+            </p>
+          </div>
+          <div className="">
+            {searchImage
+              ? items.map((item, index) => (
+                  <SearchImageTemplates data={item} key={index} />
+                ))
+              : items.map((item, index) => (
+                  <SearchItemTemplates data={item} key={index} />
+                ))}
+          </div> */}
         </main>
         <HomeFooter></HomeFooter>
       </div>
