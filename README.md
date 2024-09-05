@@ -1,6 +1,6 @@
 # Google Clone
 
-A Google search engine clone built with React.js, Vite, Axios, React Router, Context API, and Google Search API, featuring voice search capabilities and an image search section.
+A Google search engine clone built with React.js, Vite, Axios, React Router, Context API, and Google Search API, featuring an image search section.
 
 ## Features
 

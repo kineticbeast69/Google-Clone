@@ -12,8 +12,8 @@ function SearchPage() {
   const { searchImage } = useContext(dataContext);
   let queryValue = query.split("+").join(" ");
   // const fetchSearchResult = () => {
-  //   const payload = { q: queryValue, start: index };
-  //   if (searchImage) payload.searchType = "images";
+  //   let payload = { q: queryValue, start: index };
+  //   if (searchImage) payload = { ...payload, searchType: "image" };
   //   fetchData(payload).then((response) => setResult(response));
   // };
   // useEffect(() => {
@@ -38,7 +38,9 @@ function SearchPage() {
           <div className="">
             {searchImage
               ? items.map((item, index) => (
-                  <SearchImageTemplates data={item} key={index} />
+                  <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-4">
+                    <SearchImageTemplates data={item} key={index} />
+                  </div>
                 ))
               : items.map((item, index) => (
                   <SearchItemTemplates data={item} key={index} />

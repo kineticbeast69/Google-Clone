@@ -5,7 +5,6 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ContextProvider from "./context/contextProvider.jsx";
 import SearchPage from "./pages/searchPage.jsx";
-import VoiceSearch from "./pages/voicepage.jsx";
 const route = createBrowserRouter([
   {
     path: "/",
@@ -14,10 +13,6 @@ const route = createBrowserRouter([
   {
     path: "/search/:query/:index",
     element: <SearchPage />,
-  },
-  {
-    path: "/voiceSearch",
-    element: <VoiceSearch />,
   },
 ]);
 
