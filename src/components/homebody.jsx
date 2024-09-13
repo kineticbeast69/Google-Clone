@@ -3,7 +3,7 @@ function HomeBody() {
   return (
     <main className="grow flex flex-col align-middle">
       <div className="w-[350px] mx-auto mt-20">
-        <img src="../../images/google-logo.png" alt="" />
+        <img src="../../public/images/google-logo.png" alt="" />
       </div>
       <InputTag />
       <div className="buttons flex align-middle justify-center mt-7">
@@ -19,47 +19,56 @@ function HomeBody() {
           <li>Google Offers in:</li>
           <li className="mx-2">
             <a href="" className="hover:underline text-blue-700">
-              हिन्दी
+              {" "}
+              हिन्दी{" "}
             </a>
           </li>
           <li className="mx-2">
             <a href="" className="hover:underline text-blue-700">
-              বাংলা
+              {" "}
+              বাংলা{" "}
             </a>
           </li>
           <li className="mx-2">
             <a href="" className="hover:underline text-blue-700">
-              తెలుగు
+              {" "}
+              తెలుగు{" "}
             </a>
           </li>
           <li className="mx-2">
             <a href="" className="hover:underline text-blue-700">
-              मराठी
+              {" "}
+              मराठी{" "}
             </a>
           </li>
           <li className="mx-2">
             <a href="" className="hover:underline text-blue-700">
-              தமிழ்
+              {" "}
+              தமிழ்{" "}
             </a>
           </li>
           <li className="mx-2">
             <a href="" className="hover:underline text-blue-700">
-              ગુજરાતી
+              {" "}
+              ગુજરાતી{" "}
             </a>
           </li>
           <li className="mx-2">
             <a href="" className="hover:underline text-blue-700">
-              ಕನ್ನಡ
+              {" "}
+              ಕನ್ನಡ{" "}
             </a>
           </li>
           <li className="mx-2">
             <a href="" className="hover:underline text-blue-700">
-              മലയാളം
+              {" "}
+              മലയാളം{" "}
             </a>
           </li>
           <li className="mx-2">
             <a href="" className="hover:underline text-blue-700">
-              ਪੰਜਾਬੀ
+              {" "}
+              ਪੰਜਾਬੀ{" "}
             </a>
           </li>
         </ul>

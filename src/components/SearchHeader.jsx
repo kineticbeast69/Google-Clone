@@ -31,7 +31,7 @@ function SearchHeader() {
         <div className="left-side flex justify-center align-middle gap-3">
           <div className="w-[150px]">
             <Link to="/">
-              <img src="../../images/google-logo.png" alt="" />
+              <img src="../../public/images/google-logo.png" alt="" />
             </Link>
           </div>
           <SearchInput />
