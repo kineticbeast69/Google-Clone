@@ -3,7 +3,7 @@ function HomeBody() {
   return (
     <main className="grow flex flex-col align-middle">
       <div className="w-[350px] mx-auto mt-20">
-        <img src="../../public/images/google-logo.png" alt="" />
+        <img src="../../images/google-logo.png" alt="" />
       </div>
       <InputTag />
       <div className="buttons flex align-middle justify-center mt-7">
