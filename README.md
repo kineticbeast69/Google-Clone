@@ -20,8 +20,8 @@ A Google search engine clone built with React.js, Vite, Axios, React Router, Con
 
 ## Google Home Page
 
-public/images/google home page.png
+![alt text](<projectImages/google home page.png>)
 
 ## Google Search Page
 
-public/images/google search page.png
+![alt text](<projectImages/google search page.png>)
